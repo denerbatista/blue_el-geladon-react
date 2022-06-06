@@ -1,0 +1,24 @@
+.Card_Conteiner{
+    display: flex;
+    flex-direction: row;
+    background-color: #ecebf3;
+    border-radius: 0.5rem;
+    box-shadow:#000000;
+    padding: 1rem;
+}
+
+.Card_Items{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.Card_Items > h3{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.Card_Foto{
+    height: 150px;
+    margin-right: -60px
+}

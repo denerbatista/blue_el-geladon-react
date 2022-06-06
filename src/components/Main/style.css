@@ -1,0 +1,27 @@
+.Main_Conteiner{
+    background-color: #525252;
+    width: 100%;
+    min-height: 80vh;
+    gap: 2rem;
+    padding-bottom: 2rem;
+}
+
+.Main_Title{
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0 1rem 0;
+}
+
+.Main_CardsConteiner{
+    padding: 0 10rem 0 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Main_Cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
