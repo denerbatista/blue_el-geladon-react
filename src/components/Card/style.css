@@ -22,3 +22,32 @@
     height: 150px;
     margin-right: -60px
 }
+
+.Card_ConteinerButtons{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.Card_ConteinerButtons > button{
+ padding: 0.5rem;
+ white-space: nowrap;
+ border-radius: 0.4rem;
+ cursor: pointer;
+}
+
+.Button_AddCart{
+width: 100%;
+background-color: brown;
+}
+
+.Button_Edit{
+    width: 45%;
+    background-color: aquamarine;
+}
+
+.Button_Remove{
+    width: 45%;
+    background-color: mediumvioletred;
+}

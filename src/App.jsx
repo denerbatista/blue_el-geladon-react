@@ -5,11 +5,11 @@ import Main from "./components/Main";
 
 const App = () => {
   return (
-    <div>
-      <Header />
+    <>
+      <Header modEdition={true} />
       <Main />
       <Footer/>
-    </div>
+    </>
   );
 };
 

@@ -22,15 +22,7 @@ function Main() {
       <div className="Main_CardsConteiner">
         <div className="Main_Cards">
           {paletaList.map((element) => {
-            return (
-              <Card
-                key={element._id}
-                sabor={element.sabor}
-                preco={element.preco}
-                foto={element.foto}
-                descricao={element.descricao}
-              />
-            );
+            return <Card element={element} modEdition={false} />;
           })}
         </div>
       </div>
