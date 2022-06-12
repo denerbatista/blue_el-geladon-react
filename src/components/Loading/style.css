@@ -1,0 +1,12 @@
+.Loading_Container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.Loading_Content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20rem;
+    margin: 2.5rem 15rem 0 20rem;
+}

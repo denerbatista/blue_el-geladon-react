@@ -10,7 +10,8 @@ const App = () => {
   const [filter, setFilter] = useState([]);
   const [filterListed, setFilterListed] = useState([]);
   const [paletaList, setPaletaList] = useState([]);
-  const List = async () => {
+  const [edition, setEdition] = useState(false);
+  const list = async () => {
     const response = await getList();
 
     setPaletaList(response.data);
@@ -24,20 +25,32 @@ const App = () => {
     );
   };
 
+  const handleEdition = () => {
+    setEdition(!edition);
+  };
+
   useEffect(() => {
-    List();
+    list();
   });
   return (
     <>
       <Toaster position="bottom-center" />
       <Header
-        modEdition={false}
-        paletaList={paletaList}
+        handleEdition={handleEdition}
+        modEdition={edition}
+        list={list}
         filter={filter}
         setFilter={setFilter}
         filterList={filterList}
       />
-      <Main paletaList={paletaList} filterListed={filterListed} modEdition={false} />
+      <Main
+        list={list}
+        paletaList={paletaList}
+        setFilter={setFilter}
+        filter={filter}
+        filterListed={filterListed}
+        modEdition={edition}
+      />
       <Footer />
     </>
   );
