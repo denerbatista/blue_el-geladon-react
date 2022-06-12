@@ -11,12 +11,12 @@ const ModalUpdate = ({ closeModal, element, list, identify, setsavePaletas }) =>
   const [id] = useState(element._id);
 
   const handleUpdate = async () => {
-    const response = updatePaleta({ sabor, descricao, foto, preco, id });
-
-    if (response.status === 400 || response.status === 422) {
+    const response = await updatePaleta({ sabor, descricao, foto, preco, id });
+    
+    if (response.status !== 200) {
       return toast.error("A atualização falhou");
     }
-
+    
     closeModal();
     identify === 1 ? setsavePaletas(false) : list();
     toast.success("Paleta atualizada com sucesso");
