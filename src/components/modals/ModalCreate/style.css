@@ -4,6 +4,26 @@
     margin-bottom: 0.4rem;
     padding-inline: 0.4rem;
   }
+
+  .modal-container > div > button{
+    border-radius: 2rem;
+    padding: 0.5rem;
+    color: rgb(255, 7, 7);
+    font-weight: 700;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .modal-container > div > h3{
+    color: #ffffff;
+    font-size: 2rem;
+  }
+
+  .modal-container > div > button:hover{
+    transform: scale(1.1);
+  }
   
   .modal-container > input {
     margin-bottom: 0.2rem;

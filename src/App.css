@@ -12,12 +12,26 @@
   }
   
   .modal-container {
-    width: 30vw;
-    height: 30vh;
+    width: 35vw;
+    height: 50vh;
     display: flex;
     flex-direction: column;
-    background-color: #d0db97;
+    background-color: #525252;
     border-radius: 10px;
-    border: 2px solid #4949494d;
-    padding: 0.4rem;
-  }
+    border: 7px solid #00b1d8;
+    padding: 2.4rem;
+    gap: 1rem;
+}
+
+.modal-container > input{
+  margin-bottom: 0.2rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  border: solid 10px #00b0d883;
+}
+
+.modal-container > button {
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 100%;
+}
