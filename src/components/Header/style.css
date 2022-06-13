@@ -1,12 +1,11 @@
 .Header_Container {
   display: flex;
   width: 100%;
-  height: 10vh;
+  min-height: 10vh;
   background-color: #00b0d8cc;
   justify-content: space-around;
   align-items: center;
   box-shadow: -1px 5px 5px 0px #0000006e;
-  
 }
 
 .Header_LogoName {
@@ -24,10 +23,10 @@
 .Header_LogoName > img {
   height: 10vh;
   margin-right: -41px;
-  z-index: 1
+  z-index: 1;
 }
 
-.Header_LogoName > h2{
+.Header_LogoName > h2 {
   background-color: #ffffff;
   border-radius: 1rem;
   border: 2px solid black;
@@ -35,6 +34,7 @@
   display: flex;
   flex-direction: row-reverse;
   padding: 0 15px 0 0;
+  white-space: nowrap;
 }
 
 .Header_Icons {
@@ -49,7 +49,7 @@
   cursor: pointer;
 }
 
-.Header_Icons input{
+.Header_Icons input {
   width: 30rem;
   padding: 0.6rem;
   border-radius: 1rem;
@@ -57,7 +57,7 @@
   border: #ffffff;
 }
 
-.Button_Edition{
+.Button_Edition {
   padding: 1rem;
   border-radius: 2rem;
   border: solid #ffffff;
@@ -68,8 +68,63 @@
   cursor: pointer;
 }
 
-.Button_Edition:hover{
+.Button_Edition:hover {
   background-color: #ffffff;
   color: #029abd;
   border-color: #029abd;
+}
+
+@media (max-width: 1280px) {
+  .Header_Icons {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .Header_LogoName > img {
+    margin-right: -32px;
+  }
+
+  .Header_Icons {
+    width: 65%;
+    gap: 2rem;
+    justify-content: flex-start;
+  }
+
+  .Header_LogoName {
+    width: 35%;
+  }
+
+  .Header_Icons input {
+    width: 14rem;
+  }
+}
+
+@media (max-width: 840px) {
+  .Header_Container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 640px) {
+  .Header_Icons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .Header_LogoName > h2 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .Header_LogoName {
+    width: 50%;
+  }
+}
+
+@media (max-width: 300px) {
+  .Header_LogoName {
+    width: 70%;
+  }
 }

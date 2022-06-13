@@ -2,12 +2,13 @@
   width: 30vw;
   height: 30vh;
   border-radius: 10px;
-  background-color: #d0db97;
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
   padding: 1rem;
   align-items: center;
   justify-content: center;
+  border: 7px solid #00b1d8;
 }
 
 .modalRemove-container > h3 {
@@ -35,11 +36,23 @@
 }
 
 .cancelButton {
-  color: red;
-  border: 1px solid red;
+  color: #ffffff;
+  background-color: #a30c0c;
+}
+
+.cancelButton:hover {
+  color: #a30c0c;
+  border: 1px solid #a30c0c;;
+  background-color: #ffffff;
 }
 
 .successButton {
-  color: green;
-  border: 1px solid green;
+  color: #ffffff;
+  background-color: #00b1d8;
+}
+
+.successButton:hover {
+  color: #00b1d8;
+  border: 1px solid #00b1d8;
+  background-color: #ffffff;
 }

@@ -3,8 +3,8 @@
   flex-direction: row;
   background-color: #ecebf3;
   border-radius: 0.5rem;
-  box-shadow: #000000;
   padding: 1rem;
+  width: 25rem;
 }
 
 .Card_Items {
@@ -64,4 +64,22 @@
 .Button_Remove:hover {
   color: #a30c0c;
   background-color: #ffffff;
+}
+
+@media (max-width: 1100px) {
+  .Card_Conteiner {
+    width: 20rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .Card_Conteiner {
+    width: 16rem;
+  }
+}
+
+@media (max-width: 300px) {
+  .Card_Conteiner {
+    width: 12rem;
+  }
 }

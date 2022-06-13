@@ -26,7 +26,7 @@ const ModalUpdate = ({ closeModal, element, list, identify, setsavePaletas }) =>
     <div className="modal-overlay">
       <div className="modal-container">
         <div>
-          <h3>Editar paleta</h3>
+          <h3>Editar</h3>
           <button onClick={closeModal}>X</button>
         </div>
         <input
@@ -54,7 +54,7 @@ const ModalUpdate = ({ closeModal, element, list, identify, setsavePaletas }) =>
           onChange={(event) => setFoto(event.target.value)}
           name="foto"
         />
-        <button onClick={handleUpdate}>Editar</button>
+        <button onClick={handleUpdate}>Enviar</button>
       </div>
     </div>
   );

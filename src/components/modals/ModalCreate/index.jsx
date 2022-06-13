@@ -29,7 +29,7 @@ const ModalCreate = ({ closeModal, list }) => {
     <div className="modal-overlay">
       <div className="modal-container">
         <div>
-          <h3>Adicionar ao cardápio</h3>
+          <h3>Adicionar</h3>
           <button onClick={closeModal}>X</button>
         </div>
         <input
@@ -57,7 +57,7 @@ const ModalCreate = ({ closeModal, list }) => {
           onChange={(event) => setFoto(event.target.value)}
           name="foto"
         />
-        <button onClick={handleCreatePaleta}>Adicionar</button>
+        <button onClick={handleCreatePaleta}>Enviar</button>
       </div>
     </div>
   );
