@@ -21,7 +21,7 @@ function Main({
   }, [filter]);
   return (
     <div className="Main_Conteiner">
-      <h1 className="Main_Title">Paletas Disponiveis:</h1>
+      <h1 className="Main_Title">Paletas Disponíveis:</h1>
       <div className="Main_CardsConteiner">
         <div className="Main_Cards">
           {keyLoading ? (
