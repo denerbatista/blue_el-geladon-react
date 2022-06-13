@@ -1,9 +1,14 @@
-.Footer_Conteiner{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 10vh;
-    background-color: #00b1d8;
-    box-shadow: 5px 5px -1px 0px #0000006e;
+.Footer_Conteiner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  background-color: #00b1d8;
+  box-shadow: 5px 5px -1px 0px #0000006e;
+}
+
+.Footer_Conteiner p {
+  color: #ffffff;
+  font-size: 1.5rem;
 }
