@@ -10,19 +10,20 @@ const ModalCreate = ({ closeModal, list }) => {
   const [foto, setFoto] = useState("");
 
   const handleCreatePaleta = async () => {
-    const response = createPaleta({ sabor, preco, descricao, foto });
-
-    if (response.status === 422) {
-      return toast.error("Falha na criação da paleta");
+    try {
+      await createPaleta({ sabor, preco, descricao, foto });
+      setSabor("");
+      setPreco("");
+      setDescricao("");
+      setFoto("");
+      closeModal();
+      list();
+      toast.success("Paleta adicionada com sucesso!");
+    } catch (error) {
+      toast.error(
+        `Error ${error.response.status} \n ${error.response.data.message}`
+      );
     }
-
-    setSabor("");
-    setPreco("");
-    setDescricao("");
-    setFoto("");
-    closeModal();
-    list();
-    toast.success("Paleta adicionada ao cardápio");
   };
 
   return (

@@ -2,20 +2,19 @@ import "./style.css";
 import { toast } from "react-hot-toast";
 import { deletePaleta } from "../../../services/paletaService";
 
-
 const ModalDelete = ({ closeModal, element, list }) => {
   const handleRemovePaleta = async () => {
-    
-
-    const response = await deletePaleta(element._id);
-
-    if (response.status !== 200) {
-      return toast.error("Erro na exclusão da paleta");
+    try {
+      const response = await deletePaleta(element._id);
+      console.log(response);
+      closeModal();
+      list();
+      toast.success(response.data.message);
+    } catch (error) {
+      toast.error(
+        `Error ${error.response.status} \n ${error.response.data.message}`
+      );
     }
-
-    closeModal();
-    list();
-    toast.success("Paleta excluida com sucesso");
   };
 
   return (

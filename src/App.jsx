@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import Main from "./components/Main";
 import { useEffect, useState } from "react";
 import { getList } from "./services/paletaService";
-import { Toaster } from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 
 const App = () => {
   const [filter, setFilter] = useState([]);
@@ -12,9 +12,14 @@ const App = () => {
   const [paletaList, setPaletaList] = useState([]);
   const [edition, setEdition] = useState(false);
   const list = async () => {
-    const response = await getList();
-
-    setPaletaList(response.data);
+    try {
+      const response = await getList();
+      setPaletaList(response.data);
+    } catch (error) {
+      toast.error(
+        `Error ${error.response.status} \n ${error.response.data.message}`
+      );
+    }
   };
 
   const filterList = () => {

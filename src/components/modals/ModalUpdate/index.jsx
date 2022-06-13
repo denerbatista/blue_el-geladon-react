@@ -3,7 +3,13 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 import { updatePaleta } from "../../../services/paletaService";
 
-const ModalUpdate = ({ closeModal, element, list, identify, setsavePaletas }) => {
+const ModalUpdate = ({
+  closeModal,
+  element,
+  list,
+  identify,
+  setsavePaletas,
+}) => {
   const [sabor, setSabor] = useState(element.sabor);
   const [preco, setPreco] = useState(element.preco);
   const [descricao, setDescricao] = useState(element.descricao);
@@ -11,15 +17,16 @@ const ModalUpdate = ({ closeModal, element, list, identify, setsavePaletas }) =>
   const [id] = useState(element._id);
 
   const handleUpdate = async () => {
-    const response = await updatePaleta({ sabor, descricao, foto, preco, id });
-    
-    if (response.status !== 200) {
-      return toast.error("A atualização falhou");
+    try {
+      await updatePaleta({ sabor, descricao, foto, preco, id });
+      closeModal();
+      identify === 1 ? setsavePaletas(false) : list();
+      toast.success("Paleta atualizada com sucesso");
+    } catch (error) {
+      toast.error(
+        `Error ${error.response.status} \n ${error.response.data.message}`
+      );
     }
-    
-    closeModal();
-    identify === 1 ? setsavePaletas(false) : list();
-    toast.success("Paleta atualizada com sucesso");
   };
 
   return (
