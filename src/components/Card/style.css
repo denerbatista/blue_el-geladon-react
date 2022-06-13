@@ -39,9 +39,15 @@
 
 .Button_AddCart {
   width: 100%;
-  background-color: rgba(55, 7, 168, 0.767);
+  background-color: #3707a8c4;
   color: #ffffff;
   font-weight: 700;
+}
+
+.Button_AddCart:hover {
+  color: #3707a8c4;
+  background-color: #ffffff;
+  border: solid 2px #3707a8c4;
 }
 
 .Button_Edit {
