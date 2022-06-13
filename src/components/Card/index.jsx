@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ModalDelete from "../modals/ModalDelete";
 import ModalUpdate from "../modals/ModalUpdate";
+import toast from "react-hot-toast";
 import "./style.css";
 
 function Card({ element, modEdition, list, identify, setsavePaletas }) {
@@ -12,6 +13,10 @@ function Card({ element, modEdition, list, identify, setsavePaletas }) {
   const handleModalUpdate = () => {
     setShowModalUpdate(!showModalUpdate);
   };
+
+  const inConstrution = () => {
+    toast.error("Em construção");
+  };
   return (
     <>
       <div className="Card_Conteiner">
@@ -21,7 +26,13 @@ function Card({ element, modEdition, list, identify, setsavePaletas }) {
           <p>{element.descricao}</p>
           <div className="Card_ConteinerButtons">
             {!modEdition && (
-              <button className="Button_AddCart">Adicionar ao carrinho</button>
+              <button
+                className="Button_AddCart"
+                title="Clique para adicionar ao carrinho"
+                onClick={inConstrution}
+              >
+                Adicionar ao carrinho
+              </button>
             )}
             {modEdition && (
               <button className="Button_Edit" onClick={handleModalUpdate}>
