@@ -2,7 +2,7 @@
   width: 30vw;
   height: 30vh;
   border-radius: 10px;
-  background-color: #ffffff;
+  background-color: #525252;
   display: flex;
   flex-direction: column;
   padding: 1rem;
@@ -13,6 +13,7 @@
 
 .modalRemove-container > h3 {
   margin-bottom: 2rem;
+  color: #ffffff;
 }
 
 .modalRemove-header {
