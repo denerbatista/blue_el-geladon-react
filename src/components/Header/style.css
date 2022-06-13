@@ -2,11 +2,11 @@
   display: flex;
   width: 100%;
   height: 10vh;
-  background-color: #00b1d8;
+  background-color: #00b0d8cc;
   justify-content: space-around;
   align-items: center;
-  border-radius: 0 0 20px 20px;
-  box-shadow: -1px 5px 5px 0px rgba(0, 0, 0, 0.43);
+  box-shadow: -1px 5px 5px 0px #0000006e;
+  
 }
 
 .Header_LogoName {
@@ -14,10 +14,27 @@
   justify-content: center;
   align-items: center;
   width: 50%;
+  color: #ffffff;
+  color: #00b0d8;
+  font-family: Bowlby One SC;
+  letter-spacing: 2px;
+  -webkit-text-stroke: 1px black;
 }
 
 .Header_LogoName > img {
   height: 10vh;
+  margin-right: -41px;
+  z-index: 1
+}
+
+.Header_LogoName > h2{
+  background-color: #ffffff;
+  border-radius: 1rem;
+  border: 2px solid black;
+  width: 13rem;
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 0 15px 0 0;
 }
 
 .Header_Icons {
@@ -25,11 +42,11 @@
   width: 50%;
   align-items: center;
   justify-content: space-evenly;
-
 }
 
 .Header_Icons > img {
   height: 6vh;
+  cursor: pointer;
 }
 
 .Header_Icons input{
@@ -37,9 +54,22 @@
   padding: 0.6rem;
   border-radius: 1rem;
   font-size: 1rem;
+  border: #ffffff;
 }
 
 .Button_Edition{
   padding: 1rem;
   border-radius: 2rem;
+  border: solid #ffffff;
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  background-color: #00b0d8cc;
+  cursor: pointer;
+}
+
+.Button_Edition:hover{
+  background-color: #ffffff;
+  color: #029abd;
+  border-color: #029abd;
 }

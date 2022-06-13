@@ -1,53 +1,67 @@
-.Card_Conteiner{
-    display: flex;
-    flex-direction: row;
-    background-color: #ecebf3;
-    border-radius: 0.5rem;
-    box-shadow:#000000;
-    padding: 1rem;
+.Card_Conteiner {
+  display: flex;
+  flex-direction: row;
+  background-color: #ecebf3;
+  border-radius: 0.5rem;
+  box-shadow: #000000;
+  padding: 1rem;
 }
 
-.Card_Items{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+.Card_Items {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-.Card_Items > h3{
-    font-size: 1.5rem;
-    font-weight: 700;
+.Card_Items > h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
-.Card_Foto{
-    height: 150px;
-    margin-right: -60px
+.Card_Foto {
+  height: 150px;
+  margin-right: -60px;
 }
 
-.Card_ConteinerButtons{
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    margin-top: 1rem;
+.Card_ConteinerButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
 }
 
-.Card_ConteinerButtons > button{
- padding: 0.5rem;
- white-space: nowrap;
- border-radius: 0.4rem;
- cursor: pointer;
+.Card_ConteinerButtons > button {
+  padding: 0.5rem;
+  white-space: nowrap;
+  border-radius: 0.4rem;
+  cursor: pointer;
 }
 
-.Button_AddCart{
-width: 100%;
-background-color: brown;
+.Button_AddCart {
+  width: 100%;
+  background-color: rgba(55, 7, 168, 0.767);
+  color: #ffffff;
+  font-weight: 700;
 }
 
-.Button_Edit{
-    width: 45%;
-    background-color: aquamarine;
+.Button_Edit {
+  width: 45%;
+  color: #ffffff;
+  background-color: #00b1d8;
 }
 
-.Button_Remove{
-    width: 45%;
-    background-color: mediumvioletred;
+.Button_Edit:hover {
+  color: #00b1d8;
+  background-color: #ffffff;
+}
+
+.Button_Remove {
+  width: 45%;
+  color: #ffffff;
+  background-color: #a30c0c;
+}
+
+.Button_Remove:hover {
+  color: #a30c0c;
+  background-color: #ffffff;
 }

@@ -6,6 +6,7 @@ import login from "../../assets/icons/safety.png";
 import logout from "../../assets/icons/logout.png";
 import { useEffect, useState } from "react";
 import ModalCreate from "../modals/ModalCreate";
+import toast from "react-hot-toast";
 
 const Header = ({
   handleEdition,
@@ -19,6 +20,11 @@ const Header = ({
   const closeModal = () => {
     setShowModalCreate(!showModalCreate);
   };
+
+  const inConstrution = () =>{
+    toast.error("Em construção")
+  }
+
   useEffect(() => {
     filterList();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -40,10 +46,10 @@ const Header = ({
             value={filter}
             onChange={(event) => setFilter(event.target.value)}
           />
-          {modEdition && <img alt="Adicionar paleta" src={paletaAdd} onClick={closeModal} />}
-          <img alt="Sacola de checkout" src={checkoutIcon} />
-          {!modEdition && <img src={login} alt="Botão login" />}
-          {modEdition && <img src={logout} alt="Botão logout" />}
+          {modEdition && <img alt="Adicionar paleta" src={paletaAdd} onClick={closeModal} title="Click para cadastar uma paleta" />}
+          <img alt="Sacola de checkout" src={checkoutIcon} onClick={inConstrution} title="Clique para ver carrinho"/>
+          {!modEdition && <img src={login} alt="Botão login" onClick={inConstrution} title="Clique para logar"/>}
+          {modEdition && <img src={logout} alt="Botão logout" onClick={inConstrution} title="Clique para logout"/>}
         </div>
       </div>
       {showModalCreate && <ModalCreate closeModal={closeModal} list={list} />}
